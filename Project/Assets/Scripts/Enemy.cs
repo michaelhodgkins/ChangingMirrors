@@ -8,11 +8,13 @@ public class Enemy : MonoBehaviour
     private GameObject player;
     public float speed;
 
+
     // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
+
     }
 
     // Update is called once per frame
@@ -22,3 +24,5 @@ public class Enemy : MonoBehaviour
         enemyRb.AddForce(speed * Time.deltaTime * lookDirection, ForceMode.Impulse);
     }
 }
+
+    
