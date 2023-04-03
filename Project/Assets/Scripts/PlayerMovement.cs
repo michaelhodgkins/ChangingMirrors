@@ -27,6 +27,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement * speed, ForceMode.Impulse);
+        rb.AddForce(movement * speed * Time.deltaTime, ForceMode.Impulse);
     }
 }
