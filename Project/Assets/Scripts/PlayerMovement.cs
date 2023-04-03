@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private float movementX;
     private float movementY;
     public float speed = 1;
+
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +25,18 @@ public class PlayerMovement : MonoBehaviour
         movementY = movementVector.y;
     }
 
+    private void OnFire()
+    {
+        Instantiate(bullet, transform.position, bullet.transform.rotation);
+
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed * Time.deltaTime, ForceMode.Impulse);
     }
+
+ 
 }
