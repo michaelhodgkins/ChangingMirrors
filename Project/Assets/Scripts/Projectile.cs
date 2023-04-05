@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 100;
-    private Rigidbody rb;
+    private float speed = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-
+        transform.Translate(new Vector3(0,0,-1) * speed * Time.deltaTime); 
     }
 }
