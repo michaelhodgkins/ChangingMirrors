@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
     public GameObject projectile;
@@ -41,5 +42,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
- 
+   
+
+
 }

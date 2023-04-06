@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellBook : MonoBehaviour
 {
-    public float rotationSpeed = 30.0f;
+    public float rotationSpeed = 60.0f;
     public GameObject player;
 
     private Transform playerTransform;
