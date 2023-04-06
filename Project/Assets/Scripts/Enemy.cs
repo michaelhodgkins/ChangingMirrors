@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private Rigidbody enemyRb;
-    private GameObject player;
+    public GameObject player;
     public float speed;
 
 
@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
-        player = GameObject.Find("Player");
+        
 
     }
 
@@ -22,7 +22,19 @@ public class Enemy : MonoBehaviour
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         enemyRb.AddForce(speed * Time.deltaTime * lookDirection, ForceMode.Impulse);
+        
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("OOB"))
+        {
+            Destroy(this.gameObject);
+        }
+        
+    }
+
+    
 }
 
     

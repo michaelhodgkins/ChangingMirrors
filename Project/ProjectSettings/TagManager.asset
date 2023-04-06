@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Walls
+  - OOB
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 1152129437
     locked: 0
